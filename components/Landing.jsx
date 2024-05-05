@@ -1,5 +1,6 @@
-import Link from "next/link";
+/* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
+import Link from "next/link";
 
 const Landing = () => {
   return (
@@ -21,7 +22,8 @@ const Landing = () => {
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link
                   href="/docs/introduction"
-                  className="inline-flex justify-center rounded-lg bg-slate-900 px-4 py-3 text-sm font-semibold text-white hover:bg-slate-700">
+                  className="inline-flex justify-center rounded-lg bg-slate-900 px-4 py-3 text-sm font-semibold text-white hover:bg-slate-700"
+                >
                   <span>Get Started</span>
                 </Link>
               </div>
@@ -32,6 +34,7 @@ const Landing = () => {
                 width="1600"
                 height="1280"
                 className="relative z-20 -mb-36 aspect-[853/682] max-w-[630px] rounded-xl bg-slate-200 shadow-xl shadow-black/5 ring-1 ring-slate-900/5 sm:-mb-16 lg:-mb-8 xl:-mb-16"
+                alt="Protocol Documentation Banner Image"
               />
             </div>
           </div>
