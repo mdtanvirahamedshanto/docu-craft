@@ -1,3 +1,4 @@
+import Icon from "@/public/assets/icons/logo.svg";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,7 +8,7 @@ const Logo = () => {
       <Link href="/">
         <Image
           className="h-6 w-auto"
-          src="assets/icons/logo.svg"
+          src={Icon}
           alt="Logo"
           width={100}
           height={24}
