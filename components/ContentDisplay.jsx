@@ -1,19 +1,17 @@
 import { getDocumentContent } from "@/lib/doc";
 import Link from "next/link";
 import Tag from "./Tag";
-const ContentDisplay = async ({id}) => {
+const ContentDisplay = async ({ id }) => {
   const documentContent = await getDocumentContent(id);
-
-  console.log(documentContent);
 
   return (
     <article className="prose dark:prose-invert">
       <h1>{documentContent.title}</h1>
       <div>
-        <span>Published On: {documentContent.date}</span> by {" "}
+        <span>Published On: {documentContent.date}</span> by{" "}
         <Link href={`/author/${documentContent.author}`}>
           {documentContent.author}
-        </Link> {" "}
+        </Link>{" "}
         under the{" "}
         <Link href={`/categories/${documentContent.category}`}>
           {documentContent.category}
@@ -26,9 +24,10 @@ const ContentDisplay = async ({id}) => {
       </div>
       <div
         className="lead"
-        dangerouslySetInnerHTML={{__html: documentContent.contentHtml}} />
+        dangerouslySetInnerHTML={{ __html: documentContent.contentHtml }}
+      />
     </article>
-  )
-}
+  );
+};
 
-export default ContentDisplay
+export default ContentDisplay;
